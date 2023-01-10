@@ -9,7 +9,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  editURL = ""
   description = "Cheatsheet for OOP-Course"
   author = "Mathieu Cornic"
   showVisitedLinks = false
