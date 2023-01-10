@@ -1,0 +1,43 @@
+baseURL = "/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "OOP-Cheatsheet"
+theme = "hugo-theme-learn"
+themesdir = "./themes/"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  description = "Cheatsheet for OOP-Course"
+  author = "Mathieu Cornic"
+  showVisitedLinks = false
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  titleSeparator = "::"
+
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "hm"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Cheatsheet for OOP-Course"
+weight = 1
+languageName = "English"
+landingPageURL = "/en"
+landingPageName = "<i class='fas fa-home'></i> Home"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-book'></i> Vorlesungsthemen (Archiv)"
+url = "/vorlesungsthemen"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-clone'></i> Beispiele"
+url = "/beispiele"
