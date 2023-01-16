@@ -135,7 +135,7 @@ Es ist auch wichtig zu beachten, dass ab Java 8 Interfaces auch default Methoden
 ￼
 {{% /expand%}}
 
-{{%expand "welche Konstellationen sind möglich - da war doch noch etwas in etwa "eine abstrakte Klasse/Interface kann nicht von einem solchen selbigen erben", oder?" %}}
+{{%expand "Welche Konstellationen sind möglich - da war doch noch etwas in etwa 'eine abstrakte Klasse/Interface kann nicht von einem solchen selbigen erben', oder?" %}}
 
 
 Ja, das ist richtig. Eine abstrakte Klasse kann nicht von einer anderen abstrakten Klasse erben und ein Interface kann nicht von einem anderen Interface erben. Eine abstrakte Klasse kann jedoch von einem Interface erben und eine Klasse kann sowohl von einer abstrakten Klasse als auch von mehreren Interfaces erben.
