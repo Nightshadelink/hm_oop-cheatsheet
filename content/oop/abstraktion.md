@@ -23,7 +23,7 @@ abstract class Blume{
 
   // nicht abstrakte Methode kann von jeder Subklasse genutzt werden
   public String pflanzen(){
-      System.out.println("Ich werden gepflanzt");
+      System.out.println("Ich werde gepflanzt");
   }
 }
 
