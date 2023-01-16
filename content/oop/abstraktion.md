@@ -54,6 +54,8 @@ public class A4 implements Papier{
 }
 ```
 
+### FAQ
+
 {{%expand "Was ist der Unterschied zwischen einer Abstract Class und einem Interface in Java" %}}
 
 In Java gibt es zwei Arten von abstrakten Typen: abstrakte Klassen und Interfaces. Der Unterschied besteht darin, dass:
@@ -63,7 +65,7 @@ Ein anderer Unterschied ist, dass eine Klasse nur von einer abstrakten Klasse er
 
 {{% /expand%}}
 
-{{%expand "wann erkenne ich wann ich was verwenden soll? gibt es eine Eselsbrücke dafür?" %}}
+{{%expand "Wann erkenne ich wann ich was verwenden soll? gibt es eine Eselsbrücke dafür?" %}}
 
 
 Es gibt keine feste Regel dafür, wann man eine abstrakte Klasse oder ein Interface verwenden sollte. Es hängt von der spezifischen Anforderung Ihres Projekts und der Art der Beziehungen zwischen den Klassen ab. Eine allgemeine Empfehlung ist jedoch:
@@ -95,7 +97,7 @@ Es ist wichtig zu beachten, dass eine abstrakte Klasse mindestens eine abstrakte
 
 {{% /expand%}}
 
-{{%expand "kann ein Interface instanziiert werden?" %}}
+{{%expand "Kann ein Interface instanziiert werden?" %}}
 
 
 Nein, ein Interface kann nicht instanziiert werden. Ein Interface ist ein abstrakter Typ, der nur Methodensignaturen enthält, aber keine Implementierungen. Es kann keine Objekte von einem Interface erstellt werden, da es keine konkrete Implementierung der Methoden hat.
@@ -124,7 +126,7 @@ In diesem Beispiel kann man sehen, dass die Klasse MyClass das Interface MyInter
 ￼
 {{% /expand%}}
 
-{{%expand "dann können folglich weder Interfaces, noch abstrakte Klassen instanziiert werden, oder?" %}}
+{{%expand "Dann können folglich weder Interfaces, noch abstrakte Klassen instanziiert werden, oder?" %}}
 
 
 Das ist richtig, weder Interfaces noch abstrakte Klassen können direkt instanziiert werden.
@@ -151,7 +153,7 @@ Es gibt auch die Möglichkeit, dass eine abstrakte Klasse mehrere Interfaces imp
 ￼
 {{% /expand%}}
 
-{{%expand "wie könnte eine nicht-abstrakte Methode aussehen, welche von einer abstrakten Klasse und mehreren Interfaces erbt?" %}}
+{{%expand "Wie könnte eine nicht-abstrakte Methode aussehen, welche von einer abstrakten Klasse und mehreren Interfaces erbt?" %}}
 
 
 Wenn eine nicht-abstrakte Klasse von einer abstrakten Klasse und mehreren Interfaces erbt, muss sie die Methoden der abstrakten Klasse und der Interfaces implementieren. Eine nicht-abstrakte Methode, die von einer abstrakten Klasse und mehreren Interfaces erbt, könnte in etwa so aussehen:
@@ -190,7 +192,7 @@ Es ist auch wichtig zu beachten, dass in diesem Beispiel, falls in eines der Int
 ￼
 {{% /expand%}}
 
-{{%expand "Und mit "default-Methoden" meist du solche Methoden, welche nicht nur Methodensignaturen, sondern auch Implementierungen sind, oder?" %}}
+{{%expand "Und mit 'default-Methoden' meist du solche Methoden, welche nicht nur Methodensignaturen, sondern auch Implementierungen sind, oder?" %}}
 
 
 Ja, das ist korrekt. "Default-Methoden" sind Methoden in Interfaces, die nicht nur Methodensignaturen, sondern auch eine Implementierung besitzen. Diese Methoden können direkt aufgerufen werden, ohne dass die implementierende Klasse eine eigene Implementierung bereitstellen muss.
@@ -199,12 +201,7 @@ Wenn eine Klasse ein Interface implementiert, das default Methoden enthält, kan
 Es ist auch wichtig zu beachten, dass eine abstrakte Klasse, die ein Interface implementiert, die default Methoden des Interfaces entweder implementieren oder als abstrakt deklarieren muss.
 
 ￼
-{{% /expand%}}
-
-{{%expand "hast du für letzteres ein Beispiel?" %}}
-
-
-Gerne. Hier ist ein Beispiel, in dem eine abstrakte Klasse ein Interface implementiert, das default Methoden enthält:
+Hier ist ein Beispiel, in dem eine abstrakte Klasse ein Interface implementiert, das default Methoden enthält:
 
 ```java
 interface MyInterface {
