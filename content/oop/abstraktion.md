@@ -54,8 +54,6 @@ public class A4 implements Papier{
 }
 ```
 
-{{% /expand%}}
-
 {{%expand "Was ist der Unterschied zwischen einer Abstract Class und einem Interface in Java" %}}
 
 In Java gibt es zwei Arten von abstrakten Typen: abstrakte Klassen und Interfaces. Der Unterschied besteht darin, dass:
@@ -234,3 +232,5 @@ In diesem Beispiel implementiert die abstrakte Klasse MyAbstractClass das Interf
 Es ist auch wichtig zu beachten, dass die nicht-abstrakte Unterklasse MyConcreteClass, die von MyAbstractClass erbt, die default Methode myDefaultMethod() nicht implementieren muss, da sie bereits von der abstrakten Klasse implementiert wurde.
 Es gibt auch die Möglichkeit, dass die abstrakte Klasse die default Methode als abstrakt deklariert und somit die nicht-abstrakte Unterklasse die Methode implementieren muss.
 Es gibt also mehrere Möglichkeiten, wie eine abstrakte Klasse mit default Methoden in Interfaces umgehen kann.
+
+{{% /expand%}}
