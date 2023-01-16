@@ -3,6 +3,20 @@ title: "Code - Flights"
 ---
 
 
+{{%expand "Flight" %}}
+
+```java
+package src;
+
+public interface Flight {
+    public int getDistance();
+    default public double getFinalPrice(FlightClass flightClass) {
+        return getDistance() * flightClass.getPriceFactor();
+    }
+}
+```
+
+{{% /expand%}}
 {{%expand "Airport" %}}
 
 ```java
@@ -42,15 +56,6 @@ public class Airport {
 ```
 
 {{% /expand%}}
-{{%expand "Flight" %}}
-
-```java
-abstract class Shape {
-    abstract double getArea();
-}
-```
-
-{{% /expand%}}
 {{%expand "FlightClass" %}}
 
 ```java
@@ -67,29 +72,6 @@ public enum FlightClass {
 
     public double getPriceFactor() {
         return priceFactor;
-    }
-}
-```
-
-{{% /expand%}}
-{{%expand "Main" %}}
-
-```java
-package src;
-
-public class Main {
-    public static void main(String[] args) {
-
-        new StopOverFlight(2050, new Airport("München"), new Airport("Paris"),
-        new Airport("New York"), new Airport("Seattle"));
-        Airport munich = new Airport("Munich");
-        Airport paris = new Airport("Paris");
-        NonStopFlight nonStopFlight = new NonStopFlight(670, munich, paris);
-
-        assert nonStopFlight.getDistance() == 670;
-        assert nonStopFlight.getStartAirport().equals(munich);
-        assert nonStopFlight.getEndAirport().equals(paris);
-
     }
 }
 ```
@@ -191,6 +173,29 @@ class RoundTripFlight extends OpenFlight {
     }
 }
 
+```
+
+{{% /expand%}}
+{{%expand "Main" %}}
+
+```java
+package src;
+
+public class Main {
+    public static void main(String[] args) {
+
+        new StopOverFlight(2050, new Airport("München"), new Airport("Paris"),
+        new Airport("New York"), new Airport("Seattle"));
+        Airport munich = new Airport("Munich");
+        Airport paris = new Airport("Paris");
+        NonStopFlight nonStopFlight = new NonStopFlight(670, munich, paris);
+
+        assert nonStopFlight.getDistance() == 670;
+        assert nonStopFlight.getStartAirport().equals(munich);
+        assert nonStopFlight.getEndAirport().equals(paris);
+
+    }
+}
 ```
 
 {{% /expand%}}
